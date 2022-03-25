@@ -46,7 +46,6 @@ router.patch("/:id", [authenticate, authorize()], async (req, res) => {
       req.params.id,
       {
         ...req.body,
-        user_id: req.user._id,
       },
       { new: true }
     );
